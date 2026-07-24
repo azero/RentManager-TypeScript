@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Security vulnerability
+    url: https://github.com/azero/RentManager-TypeScript/security/advisories/new
+    about: Report vulnerabilities privately. Do not open a public issue.
+  - name: Rent Manager product or API support
+    url: https://www.rentmanager.com/support/
+    about: Contact Rent Manager for account, subscription, or service support.

@@ -1,0 +1,75 @@
+{
+  "name": "@azero/rentmanager-api",
+  "version": "0.1.0",
+  "description": "Typed TypeScript SDK for the complete Rent Manager WAPI12 catalog.",
+  "license": "PolyForm-Noncommercial-1.0.0",
+  "author": "AZer0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./workflows": {
+      "types": "./dist/workflows/index.d.ts",
+      "import": "./dist/workflows/index.js",
+      "require": "./dist/workflows/index.cjs"
+    },
+    "./catalog": {
+      "types": "./dist/catalog.d.ts",
+      "import": "./dist/catalog.js",
+      "require": "./dist/catalog.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "LICENSE",
+    "README.md",
+    "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "generate": "node scripts/generate-catalog.mjs",
+    "check:generated": "node scripts/generate-catalog.mjs --check",
+    "build": "npm run generate && node scripts/build.mjs && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "check": "npm run check:generated && npm run typecheck && npm test && npm run build",
+    "prepack": "npm run check"
+  },
+  "keywords": [
+    "rent-manager",
+    "property-management",
+    "wapi12",
+    "api",
+    "sdk",
+    "typescript"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/azero/RentManager-TypeScript.git"
+  },
+  "bugs": {
+    "url": "https://github.com/azero/RentManager-TypeScript/issues"
+  },
+  "homepage": "https://github.com/azero/RentManager-TypeScript#readme",
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "@vitest/coverage-v8": "^3.2.7",
+    "esbuild": "^0.28.1",
+    "typescript": "^5.9.3",
+    "vite": "^6.4.3",
+    "vitest": "^3.2.7"
+  }
+}

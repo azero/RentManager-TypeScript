@@ -1,0 +1,13 @@
+node_modules/
+dist/
+coverage/
+*.tgz
+.env
+.env.*
+!.env.example
+.rentmanager-*.json
+service-ticket-exports/
+exports/
+*.log
+.DS_Store
+Thumbs.db
