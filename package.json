@@ -66,10 +66,10 @@
   "homepage": "https://github.com/azero/RentManager-TypeScript#readme",
   "devDependencies": {
     "@types/node": "^26.1.1",
-    "@vitest/coverage-v8": "^3.2.7",
+    "@vitest/coverage-v8": "^4.1.10",
     "esbuild": "^0.28.1",
     "typescript": "^7.0.2",
     "vite": "^6.4.3",
-    "vitest": "^3.2.7"
+    "vitest": "^4.1.10"
   }
 }
